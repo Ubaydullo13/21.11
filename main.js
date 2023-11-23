@@ -171,3 +171,126 @@ console.log(uzunlik("make"));
 console.log(uzunlik("a"));
 console.log(uzunlik(""));
 console.log(uzunlik(" "));
+
+
+// 41
+
+function bolinsin(x, y) {
+  if(x % y === 0){
+    return true
+  }else{
+    return false
+  }
+}
+
+console.log(bolinsin(98, 7));
+console.log(bolinsin(85, 4));
+
+// 42
+
+function raqam(str) {
+  // Stringni raqamga o'girib qaytarish
+  return Number(str);
+}
+
+console.log(raqam("6"));
+console.log(raqam("1000"));  
+console.log(raqam("12"));   
+
+
+// 43 
+function tortYuzi(a, b){
+  if(a <= 0 || b <= 0){
+    return -1
+  }else{
+    return a * b
+  }
+}
+
+console.log(tortYuzi(3, 4));
+console.log(tortYuzi(10, 11));
+console.log(tortYuzi(-1, 5));
+console.log(tortYuzi(0, 2));
+
+// 44
+
+function ismFam(ism, familiya) {
+  return familiya + ', ' + ism;
+}
+
+console.log(ismFam("First", "Last"));
+console.log(ismFam("John", "Doe"));
+console.log(ismFam("Mary", "Jane"));
+
+// 45
+
+function bug(x) {
+  // Agar x true bo'lsa "sad days", aks holda "it's a good day" qaytarilsin
+  return x ? "sad days" : "it's a good day";
+}
+
+console.log(bug(true));
+console.log(bug(false));
+
+// 46
+
+function tushirMassiv(arr, tushirishSoni) {
+  // Massivni boshidan boshlab nechta elementni tushurish
+  return arr.slice(tushirishSoni);
+}
+console.log(tushirMassiv([1, 2, 3], 1));
+console.log(tushirMassiv([1, 2, 3], 2)); 
+console.log(tushirMassiv([1, 2, 3], 5));
+console.log(tushirMassiv([1, 2, 3], 0)); 
+
+// 47
+
+function ovozlar(ovozObj) {
+  // Ovoz berib qo'llab quvvatlashlar sonini va ovoz berib qo'llamaganlar sonini qabul qilish
+  const upvotes = ovozObj.upvotes || 0;
+  const downvotes = ovozObj.downvotes || 0;
+  
+  return upvotes - downvotes;
+}
+
+console.log(ovozlar({ upvotes: 13, downvotes: 0 }));
+console.log(ovozlar({ upvotes: 2, downvotes: 33 }));  
+console.log(ovozlar({ upvotes: 132, downvotes: 132 }));
+
+// 48
+
+function negativ(son){
+  // return 0 - son
+  return -Math.abs(son);
+}
+
+console.log(negativ(4));
+console.log(negativ(15));
+console.log(negativ(-4));
+console.log(negativ(0));
+
+// 49
+
+function almash(arr) {
+  // Massiv elementlarini o'rnini almash
+  const result = [];
+  for (let i = arr.length - 1; i >= 0; i--) {
+    result.push(arr[i]);
+  }
+  return result;
+}
+
+console.log(almash([1, 2, 3, 4]));
+console.log(almash([9, 9, 2, 3, 4]));
+console.log(almash([]));             
+
+// 50
+
+function kinogaKirish(yosh, otaOna) {
+  // Yosh kamida 15 va ota-onasi bilan birgami yoki yo'qmi?
+  return yosh >= 15 || otaOna;
+}
+
+console.log(kinogaKirish(14, true));
+console.log(kinogaKirish(14, false));
+console.log(kinogaKirish(16, false));
